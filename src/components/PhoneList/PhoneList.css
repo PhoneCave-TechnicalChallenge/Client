@@ -1,0 +1,24 @@
+import "./PhoneCard.css";
+import React from 'react'
+import axios from 'axios'
+
+
+const PhoneCard = (props) => {
+
+/* name, manufacturer, description, color, price, imageFileName,screen, processor, ram */
+
+    return (
+        <Card>
+            <Card.Img variant="top" src={imageUrl} />
+            <Card.Body>
+                <Card.Title>{title}</Card.Title>
+                <div className="d-grid gap-2">
+                    <Link to={`/detalles/${_id}`} className="btn btn-dark">Ver detalles</Link>
+                    {owner && owner === user?._id && <Button variant='warning' onClick={() => alert('TE LO CURRAS')}>Editar</Button>}
+                </div>
+            </Card.Body>
+        </Card>
+    )
+}
+
+export default CoasterCard
